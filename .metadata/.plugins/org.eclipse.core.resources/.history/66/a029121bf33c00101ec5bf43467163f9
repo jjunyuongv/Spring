@@ -1,0 +1,6 @@
+package com.study.spring;
+
+public class HomeController
+{
+
+}

@@ -1,0 +1,21 @@
+
+5월 07, 2025 09:39:46.50 NEW SESSION
+5월 07, 2025 09:39:46.50 [19104:2268:0507/093946.502:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+5월 07, 2025 09:39:46.51 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 10, 2025 14:45:39.24 NEW SESSION
+5월 10, 2025 14:45:39.25 [6048:14824:0510/144539.242:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+5월 10, 2025 14:45:39.27 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 13, 2025 17:58:44.77 NEW SESSION
+5월 13, 2025 17:58:44.77 [7420:5660:0513/175844.769:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+5월 13, 2025 17:58:44.81 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 21, 2025 17:45:57.99 NEW SESSION
+5월 21, 2025 17:45:58.00 [24628:3012:0521/174557.994:ERROR:chrome\browser\policy\cloud\fm_registration_token_uploader.cc:179] Client is missing for kUser scope
+5월 21, 2025 17:45:58.09 [24628:5692:0521/174558.089:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+5월 21, 2025 17:45:58.11 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 21, 2025 17:46:19.64 [24628:5692:0521/174619.649:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+5월 21, 2025 17:47:18.39 [24628:5692:0521/174718.391:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+5월 21, 2025 17:48:55.73 [24628:5692:0521/174855.738:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+5월 21, 2025 17:51:41.52 [24628:5692:0521/175141.522:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
