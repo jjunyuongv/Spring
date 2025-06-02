@@ -94,5 +94,14 @@
 			</a>
 		</li>
 		
+		<hr />
+		<!-- 컨트롤러 : DIController.java -->
+		<h2>DI(Dependency Injection) : 의존성 주입</h2>
+		<li>
+			<a href="di/mydi1.do" target="_blank">
+				XML설정 파일을 통한 빈 생성1(생성자와 setter)
+			</a>
+		</li>
+		
 	</body>
 </html>
