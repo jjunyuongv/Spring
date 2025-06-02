@@ -113,5 +113,24 @@
 			</a>
 		</li>
 		
+		<hr />
+		<!-- 컨트롤러 : EnvironmentController -->
+		<h2>Environment 객체를 이용한 외부파일 참조하기</h2>
+		<li>
+			<a href="environment/main1.do" target="_blank">
+				외부파일 참조하기1(Environment객체 사용)
+			</a>
+		</li>
+		<li>
+			<a href="environment/main2.do" target="_blank">
+				외부파일 참조하기2(XML 설정파일 사용)
+			</a>
+		</li>
+		<li>
+			<a href="environment/main3.do" target="_blank">
+				외부파일 참조하기3(어노테이션 사용)
+			</a>
+		</li>
+		
 	</body>
 </html>

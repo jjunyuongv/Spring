@@ -37,6 +37,8 @@ C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\225
 \MustHHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\882407129.index
 \MustHHaveJSP\src\main\java
+C:\DevData\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2996271895.index
+\Ex01SpringBasic\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3596972700.index
 \MustHHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\422974855.index
