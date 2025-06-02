@@ -102,6 +102,11 @@
 				XML설정 파일을 통한 빈 생성1(생성자와 setter)
 			</a>
 		</li>
+		<li>
+			<a href="di/mydi2.do" target="_blank">
+				XML설정 파일을 통한 빈 생성2(다양한 멤버변수))
+			</a>
+		</li>
 		
 	</body>
 </html>

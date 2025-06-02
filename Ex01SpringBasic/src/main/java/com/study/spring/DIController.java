@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.study.spring.di.Circle;
+import com.study.spring.di.Person;
 
 @Controller
 public class DIController
@@ -23,6 +24,21 @@ public class DIController
 		
 		mv.setViewName("04DI/mydi1");
 		mv.addObject("circle", circle);
+		
+		return mv;
+	}
+	
+	@RequestMapping("/di/mydi2.do")
+	public ModelAndView mydi2(Model model) {
+		ModelAndView mv = new ModelAndView();
+		
+		String configLocation = "classpath:my_di2.xml";
+		AbstractApplicationContext ctx = 
+				new GenericXmlApplicationContext(configLocation);
+		Person person = ctx.getBean("person", Person.class);
+		
+		mv.setViewName("04DI/mydi2");
+		mv.addObject("person", person.getInfo());
 		
 		return mv;
 	}
