@@ -107,6 +107,11 @@
 				XML설정 파일을 통한 빈 생성2(다양한 멤버변수))
 			</a>
 		</li>
+		<li>
+			<a href="di/mydi3.do" target="_blank">
+				어노테이션을 통한 빈 생성
+			</a>
+		</li>
 		
 	</body>
 </html>
