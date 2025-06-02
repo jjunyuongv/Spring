@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<annotation-driven/>
+	
+	<!-- 정적파일 경로 세팅 -->
+	<!-- View(뷰)에서 이미지나 JS, CSS와 같은 정적리소스를 사용하는
+	경우 Spring이 제공하는 디렉토리로 아래와 같이 매핑할 수 있다. 
+	즉, webapp하위의 resources디렉토리를 3개의 별칭으로 매핑하여
+	사용할 수 있다.  -->
+	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/static/**" location="/resources/" />
+	<resources mapping="/images/**" location="/resources/" />
+
+	<!-- ViewResolver를 통한 JSP 세팅 -->
+	<!-- 컨트롤러에서 JSP파일의 파일명을 반환하면 뷰리졸버가 받아 
+	최종경로를 완성한다. 
+	prefix + JSP파일명 + suffix => /WEB-INF/views/파일명.jsp 
+	-->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<!-- 애플리케이션 시작시 자동으로 스캔할 기본패키지 지정 -->
+	<!-- SpringMVC로 요청이 들어오면 제일 먼저 DispatcherServlet이
+	그 요청을 받는다. 그리고 아래 설정된 기본패키지를 Scan(스캔)한 후 
+	@Controller 어노테이션이 설정된 클래스의 요청명이 매핑된 메서드를
+	찾아 요청을 전달한다. 즉 요청을 전달할 컨트롤러 클래스를 찾는 역할을
+	한다.  -->
+	<context:component-scan base-package="com.study.spring" />
+	
+</beans:beans>

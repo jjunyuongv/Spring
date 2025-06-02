@@ -7,6 +7,8 @@ C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\635
 \MustHHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\881278167.index
 \MustHHaveJSP\src\main\java
+C:\DevData\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3379320310.index
+\Ex01SpringBasic\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3497698948.index
 \MustHHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3970387359.index
@@ -23,6 +25,8 @@ C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\415
 \MustHHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4119812909.index
 \MustHaveJSP\src\main\java
+C:\DevData\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3800486477.index
+\Ex01SpringBasic\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1422350790.index
 \MustHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1867339659.index
@@ -61,12 +65,16 @@ C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\149
 \MustHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\748570908.index
 \MustHHaveJSP\src\main\java
+C:\DevData\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2251975486.index
+\Ex01SpringBasic\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3003299024.index
 \MustHHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1727649681.index
 \MustHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3378435715.index
 \MustHHaveJSP\src\main\java
+C:\DevData\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2409922655.index
+\Ex01SpringBasic\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1622600135.index
 \MustHaveJSP\src\main\java
 C:\DevData\JSP_Servlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1767525072.index
