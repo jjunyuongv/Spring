@@ -39,6 +39,13 @@
 	한다.  -->
 	<context:component-scan base-package="com.study.spring" />
 	
+	<!-- servlet-context.xml파일은 스프링 웹애플리케이션이 최초로
+	실행될때 가장먼저 동작하는 부분이므로 별도의 설정이 없어도 아래에 
+	기술한 빈(객체)은 자동으로 생성된다.  -->
+	<!-- 파일업로드를 위한 빈 생성 -->	
+	<!-- 디펜던시로 설정된 라이브러리 중에 spring-web-버전.jar에 
+	포함된 클래스를 찾아서 경로를 복사한 후 class속성에 기술한다.  -->
+	<!--빈 이름은 무조건  multipartResolver -->
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></beans:bean>
 	
 </beans:beans>

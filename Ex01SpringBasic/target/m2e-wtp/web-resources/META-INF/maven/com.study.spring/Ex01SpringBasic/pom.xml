@@ -65,6 +65,7 @@
 		<version>3.0.1</version>
 	</dependency>
 	
+	<!-- 파일업로드 의존설정 -->
 	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 	<dependency>
 	    <groupId>commons-io</groupId>

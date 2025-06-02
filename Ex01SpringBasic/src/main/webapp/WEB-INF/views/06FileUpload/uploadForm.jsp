@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>uploadForm</title>
 		<link rel="stylesheet" href="../static/bootstrap-5.1.3/css/bootstrap.min.css" />
 		<script src="../static/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
 		<script src="../static/jquery/jquery-3.7.1.min.js"></script>
@@ -12,7 +12,11 @@
 	<body>
 	<div class="container">
 	    <h2>파일업로드 폼</h2>
-	    
+	    <!--  
+	 	파일 업로드를 위한 <form>태그 구성
+	 	1.전송방식은 post로 지정해야한다. 
+	 	2.enctype(인코딩방식)은 multipart/form-data로 지정해야한다.
+	 	-->
 	    <form name="fileFrm" method="post" action="uploadAction.do" 
 	               enctype="multipart/form-data">
 	   	 
@@ -48,6 +52,6 @@
 	    </table>
 	    </form>
 	</div>
-	
 	</body>
+
 </html>
