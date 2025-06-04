@@ -182,7 +182,7 @@ public class FileuploadController
 			throw new Exception("파일을 찾을수 없습니다.");
 		}
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("fileDownloadView");
+		mv.setViewName("fileDownLoadView");
 		mv.addObject("downloadFile", downloadFile);
 		mv.addObject("oriFileName", oriFileName);
 		return mv;

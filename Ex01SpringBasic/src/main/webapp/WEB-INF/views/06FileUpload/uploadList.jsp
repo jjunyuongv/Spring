@@ -19,7 +19,7 @@
 	   	 <li>
 	   		 파일명 : ${file.key }
 	   		 &nbsp;&nbsp;
-	   		 파일크기 : ${file.value }Kb
+	   		 파일크기 : ${file.value }
 	   		 &nbsp;&nbsp;
 	   		 <a href="download.do?fileName=${file.key }&oriFileName=임시파일명${vs.count }.jpg">
 	   			 [다운로드]

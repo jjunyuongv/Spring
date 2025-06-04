@@ -151,5 +151,18 @@
 			</a>
 		</li>
 		
+		<hr/>
+		
+		<h3>AOP(Aspect Oriented Programming)</h3>
+		<li>
+			<a href="./aop/main1.do" target="_blank">
+				AOP-XML 설정파일 이용
+			</a>
+		</li>
+		<li>
+			<a href="./aop/main2.do" target="_blank">
+				AOP-어노테이션 이용
+			</a>
+		</li>
 	</body>
 </html>
