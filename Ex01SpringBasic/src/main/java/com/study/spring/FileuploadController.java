@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -149,4 +150,43 @@ public class FileuploadController
 		model.addAttribute("resultList", resultList);	
 		return "06FileUpload/uploadAction";
 	}
+	
+	@RequestMapping("/fileUpload/uploadList.do")
+	public String uploadList(HttpServletRequest req, Model model) {
+		String path = req.getSession().getServletContext()
+				.getRealPath("/resources/upload");
+		File file = new File(path);
+		File[] fileArray = file.listFiles();
+		Map<String, Integer> fileMap = new HashMap<String, Integer>();
+		for(File f : fileArray)
+		{
+			fileMap.put(f.getName(), (int)Math.ceil(f.length()/1024.0));
+		}
+		model.addAttribute("fileMap", fileMap);
+		return "06FileUpload/uploadList";
+	}
+
+	@RequestMapping("/fileUpload/download.do")
+	public ModelAndView download(HttpServletRequest req
+			, HttpServletResponse resp) throws Exception {
+		
+		String fileName = req.getParameter("fileName");
+		String oriFileName = 
+				req.getParameter("oriFileName");
+		
+		String saveDirectory = req.getSession().getServletContext().getRealPath("/resources/upload");
+		
+		File downloadFile = new File(saveDirectory+"/"+fileName);
+		
+		if(!downloadFile.canRead()) {
+			throw new Exception("파일을 찾을수 없습니다.");
+		}
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("fileDownloadView");
+		mv.addObject("downloadFile", downloadFile);
+		mv.addObject("oriFileName", oriFileName);
+		return mv;
+		
+	}
+	
 }

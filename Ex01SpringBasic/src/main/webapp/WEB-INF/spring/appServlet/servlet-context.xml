@@ -31,6 +31,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	
 	<!-- 애플리케이션 시작시 자동으로 스캔할 기본패키지 지정 -->
 	<!-- SpringMVC로 요청이 들어오면 제일 먼저 DispatcherServlet이
 	그 요청을 받는다. 그리고 아래 설정된 기본패키지를 Scan(스캔)한 후 
@@ -46,6 +47,12 @@
 	<!-- 디펜던시로 설정된 라이브러리 중에 spring-web-버전.jar에 
 	포함된 클래스를 찾아서 경로를 복사한 후 class속성에 기술한다.  -->
 	<!--빈 이름은 무조건  multipartResolver -->
+	
+	<!-- 파일업로드를 위한 빈 생성 -->	
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></beans:bean>
+	
+	
+
+		
 	
 </beans:beans>

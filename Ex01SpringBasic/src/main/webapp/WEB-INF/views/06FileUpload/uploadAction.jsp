@@ -14,7 +14,7 @@
 	<div class="container">
 		<h2>파일 업로드 결과보기</h2>
 		
-		<a href="./uoloadForm.do">
+		<a href="./uploadForm.do">
 			파일업로드 폼 바로가기
 		</a>
 		<!-- model객체에 저장된 갯수만큼 반복 출력함. -->
