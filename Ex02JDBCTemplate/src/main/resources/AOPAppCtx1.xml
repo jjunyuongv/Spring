@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd">
+	
+	<bean id="commonAOP1" class="com.study.spring.aop.CommonAOP1"></bean>
+	
+	<aop:config>
+		<aop:aspect id="myAOP1" ref="commonAOP1">
+			<aop:pointcut expression="within(com.study.spring.aop.*)" id="myMethod" />
+			<aop:around pointcut-ref="myMethod" method="runTimeAOP" />
+		</aop:aspect>
+	</aop:config>
+	
+	<bean id="salesMan" class="com.study.spring.aop.SalesManVO">
+		<property name="name" value="장그래" />
+		<property name="age" value="35" />
+		<property name="job" >
+			<value>영업3팀</value>
+		</property>
+		<property name="salary">
+			<value>300</value>
+		</property>
+	</bean>
+	
+</beans>

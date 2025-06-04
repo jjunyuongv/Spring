@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="../static/bootstrap-5.1.3/css/bootstrap.min.css" />
 		<script src="../static/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
 		<script src="../static/jquery/jquery-3.7.1.min.js"></script>
-	</head>
+	</head>r
 	<body>
 	<div class="container">
 		<h1>로또 결과</h1>
