@@ -80,6 +80,7 @@
 	    <version>1.5</version>
 	</dependency>
 	
+	<!-- AOP 사용을 위한 의존설정 -->
 	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
 	<dependency>
 	    <groupId>org.aspectj</groupId>

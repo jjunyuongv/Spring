@@ -49,11 +49,12 @@
 	포함된 클래스를 찾아서 경로를 복사한 후 class속성에 기술한다.  -->
 	<!--빈 이름은 무조건  multipartResolver -->
 	
-	<!-- 파일업로드를 위한 빈 생성 -->	
-	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></beans:bean>
 	
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></beans:bean>
+	<!-- 파일 다운로드를 위한 빈 생성 -->
+	<!-- 우리가 직접 생성한 클래스를 기술한다.  -->	
 	<beans:bean id="fileDownloadView" class="com.study.spring.common.FileDownLoadView" />	
-
+	<!-- spring-webmvc-버전.jar에 포함된 클래스를 기술한다. -->
 	<beans:bean id="fileViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
 		<beans:property name="order" value="0" />		
 	</beans:bean>
