@@ -10,15 +10,15 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class CommonAOP2
 {
-	@Pointcut("within(aop.*)")
+	@Pointcut("within(com.study.spring.aop.*)")
 	private void pointcutMethod() {}
 	
-	@Before("within(aop.*)")
+	@Before("within(com.study.spring.aop.*)")
 	public void beforeAdvice() {
 		System.out.println("beforeAdvice() 메소드 실행");
 	}
 	
-	@After("within(aop.*)")
+	@After("within(com.study.spring.aop.*)")
 	public void afterAdvice() {
 		System.out.println("afterAdvice() 메소드 실행");
 	}

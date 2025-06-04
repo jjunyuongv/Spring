@@ -11,7 +11,7 @@
 	
 	<aop:config>
 		<aop:aspect id="myAOP1" ref="commonAOP1">
-			<aop:pointcut expression="within(aop.*)" id="myMethod" />
+			<aop:pointcut expression="within(com.study.spring.aop.*)" id="myMethod" />
 			<aop:around pointcut-ref="myMethod" method="runTimeAOP" />
 		</aop:aspect>
 	</aop:config>

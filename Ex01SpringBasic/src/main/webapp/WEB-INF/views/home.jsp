@@ -164,5 +164,15 @@
 				AOP-어노테이션 이용
 			</a>
 		</li>
+		
+		<hr/>
+		
+		<h3>@Controller, @Service, @Repository 어노테이션</h3>
+		<h4>Auto scan으로 자동으로 생성되는 빈</h4>
+		<li>
+			<a href="./service/myService.do" target="_blank">
+				myService 바로가기
+			</a>
+		</li>
 	</body>
 </html>

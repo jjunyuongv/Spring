@@ -39,6 +39,7 @@
 	찾아 요청을 전달한다. 즉 요청을 전달할 컨트롤러 클래스를 찾는 역할을
 	한다.  -->
 	<context:component-scan base-package="com.study.spring" />
+	<context:component-scan base-package="autoscan" />
 	
 	<!-- servlet-context.xml파일은 스프링 웹애플리케이션이 최초로
 	실행될때 가장먼저 동작하는 부분이므로 별도의 설정이 없어도 아래에 
