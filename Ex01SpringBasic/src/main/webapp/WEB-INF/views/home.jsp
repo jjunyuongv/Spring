@@ -174,5 +174,10 @@
 				myService 바로가기
 			</a>
 		</li>
+		<li>
+			<a href="./resources/lottoForm.html" target="_blank">
+				Lotto 바로가기
+			</a>
+		</li>
 	</body>
 </html>
