@@ -51,6 +51,11 @@
 	<!-- 파일업로드를 위한 빈 생성 -->	
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></beans:bean>
 	
+	<beans:bean id="fileDownloadView" class="com.study.spring.common.FileDownLoadView" />	
+
+	<beans:bean id="fileViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<beans:property name="order" value="0" />		
+	</beans:bean>
 	
 
 		
