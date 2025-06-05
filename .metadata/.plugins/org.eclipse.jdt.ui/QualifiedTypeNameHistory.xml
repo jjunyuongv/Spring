@@ -47,11 +47,8 @@
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.PreparedStatementCreator"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="springboard.service.WriteActionExecute"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="springboard.service.IBoardService"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="springboard.model.JDBCTemplateDAO"/>
     <fullyQualifiedTypeName name="springboard.service.ViewExecute"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.BeanPropertyRowMapper"/>
     <fullyQualifiedTypeName name="springboard.model.SpringBoardDTO"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
 </qualifiedTypeNameHistroy>

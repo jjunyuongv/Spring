@@ -15,7 +15,7 @@
 	<div class="container">
 		<h2>내용보기</h2>
 		
-		<table class="table table-borderd" width=90%>
+		<table class="table table-borderd" >
 			<colgroup>
 				<col width="20%" />
 				<col width="30%" />

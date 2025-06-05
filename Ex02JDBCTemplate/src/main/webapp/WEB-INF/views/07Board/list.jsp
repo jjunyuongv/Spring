@@ -23,7 +23,7 @@
 	
 		<!-- 검색폼 -->
 		<form method="get">
-		<table class="table table-borderd" width="90%">
+		<table class="table table-borderd" >
 		<tr>
 			<td align="center">
 				<select name="searchColumn">

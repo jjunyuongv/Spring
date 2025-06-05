@@ -67,4 +67,10 @@ public class BoardController
 		
 		return "07Board/view";
 	}
+	
+	@RequestMapping("/board/password.do")
+	public String password(Model model, HttpServletRequest req) {
+		model.addAttribute("idx", req.getParameter("idx"));
+		return "07Board/password";
+	}
 }
