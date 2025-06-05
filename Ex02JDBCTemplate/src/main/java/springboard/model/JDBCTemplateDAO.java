@@ -101,6 +101,52 @@ public class JDBCTemplateDAO
 		return dto;
 	}
 	
+	public int password(String idx, String pass) {
+		int resultIdx = 0;
+		String sql = "SELECT * FROM springboard "
+				+ " WHERE pass=? AND idx=?";
+		System.out.println(sql);
+		try
+		{
+			SpringBoardDTO dto = template.queryForObject(sql,
+				new BeanPropertyRowMapper<SpringBoardDTO>(SpringBoardDTO.class),
+				new Object[] {pass, idx});
+			resultIdx = dto.getIdx();
+		} catch (Exception e)
+		{
+			System.out.println("password() 예외발생");
+		}
+		
+		return resultIdx;
+	}
+	
+	public void edit(SpringBoardDTO dto) {
+		String sql = "UPDATE springboard "
+			+ " SET name=?, title=?, contents=?"
+			+ " WHERE idx=? AND pass=?";
+		
+		template.update(sql,
+			new Object[] {dto.getName(), dto.getTitle(),
+					dto.getContents(), dto.getIdx(), dto.getPass()});
+	}
+	
+	public void delete(String idx, String pass) {
+		
+		String sql = "DELETE FROM springboard "
+			+ " WHERE idx=? AND pass=?";
+		
+		template.update(sql, new PreparedStatementSetter()
+		{
+			
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException
+			{
+				ps.setString(1, idx);
+				ps.setString(2, pass);
+			}
+		});
+	}
+	
 }
 
 
