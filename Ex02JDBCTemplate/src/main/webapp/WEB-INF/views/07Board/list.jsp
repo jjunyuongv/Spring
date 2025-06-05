@@ -5,7 +5,16 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Insert title here</title>
+		<link rel="stylesheet" href="../static/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<script src="../static/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script src="../static/jquery/jquery-3.7.1.min.js"></script>
+		
+		<style type="text/css">
+		a{ text-decoration: none; color: black; }
+     	a:hover { text-decoration: underline; color: blue; }
+		</style>
 	</head>
 	<body>
 	<div class="container">	
@@ -14,7 +23,7 @@
 	
 		<!-- 검색폼 -->
 		<form method="get">
-		<table border="1" width="90%">
+		<table class="table table-borderd" width="90%">
 		<tr>
 			<td align="center">
 				<select name="searchColumn">
@@ -28,7 +37,7 @@
 		</table>	
 		</form>	
 		<!-- 글쓰기버튼 -->
-		<table border="1" width="90%">
+		<table class="table table-borderd" width="90%">
 			<tr>
 				<td align="right">
 					<button type="button" 
@@ -37,7 +46,7 @@
 			</tr>
 		</table>	
 		<!-- table>tr*2>td*5 -->
-		<table border="1" width="90%">
+		<table class="table table-borderd" width="90%">
 			<tr>
 				<th width="10%">번호</th>
 				<th width="*">제목</th>

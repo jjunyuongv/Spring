@@ -41,7 +41,7 @@ public class ListExecute implements IBoardService
 		}
 		
 		model.addAttribute("listRows", listRows);
-		dao.close();
+//		dao.close();
 		
 		
 	}
