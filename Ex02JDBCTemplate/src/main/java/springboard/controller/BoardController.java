@@ -18,6 +18,8 @@ import springboard.service.EditExecute;
 import springboard.service.IBoardService;
 import springboard.service.ListExecute;
 import springboard.service.PasswordActionExecute;
+import springboard.service.ReplyActionExecute;
+import springboard.service.ReplyExecute;
 import springboard.service.ViewExecute;
 import springboard.service.WriteActionExecute;
 
@@ -135,4 +137,27 @@ public class BoardController
 		return "redirect:view.do?idx="+ dto.getIdx();
 	}
 	
+	@RequestMapping("/board/reply.do")
+	public String reply(HttpServletRequest req, Model model) {
+		
+		model.addAttribute("req", req);
+		service = new ReplyExecute();
+		service.execute(model);
+		
+		model.addAttribute("idx", req.getParameter("idx"));
+		return "07Board/reply";
+	}
+	
+	@RequestMapping("/board/replyAction.do")
+	public String replyAction(HttpServletRequest req, Model model,
+			SpringBoardDTO SpringBoardDTO) {
+		model.addAttribute("SpringBoardDTO", SpringBoardDTO);
+		model.addAttribute("req", req);
+		service = new ReplyActionExecute();
+		service.execute(model);
+		
+		model.addAttribute("nowPage", req.getParameter("nowPage"));
+		return "redirect:list.do";
+		
+	}
 }

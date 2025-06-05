@@ -147,6 +147,39 @@ public class JDBCTemplateDAO
 		});
 	}
 	
+	public void reply(final SpringBoardDTO dto) {
+		replyPrevUpdate(dto.getBgroup(), dto.getBstep());
+		
+		String sql = "INSERT INTO springboard "
+			+ " (idx, name, title, contents, pass, "
+			+ " bgroup, bstep, bindent) "
+			+ " VALUES "
+			+ " (springboard_seq.nextval, ?, ?, ?, ?,"
+			+ " ?, ?, ?)";
+		
+		template.update(sql, new PreparedStatementSetter()
+		{
+			
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException
+			{
+				ps.setString(1, dto.getName());
+				ps.setString(2, dto.getTitle());
+				ps.setString(3, dto.getContents());
+				ps.setString(4, dto.getPass());
+				ps.setInt(5, dto.getBgroup());
+				ps.setInt(6, dto.getBstep());
+				ps.setInt(7, dto.getBindent());
+			}
+		});
+	}
+	
+	public void replyPrevUpdate(int bGroup, int bStep) {
+		String sql = "UPDATE springboard SET bstep=bstep+1 "
+				+ " WHERE bgroup=? AND bstep>?";
+		template.update(sql, new Object[] {bGroup, bStep});
+	}
+	
 }
 
 
