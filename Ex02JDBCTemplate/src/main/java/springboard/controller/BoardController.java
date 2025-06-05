@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.HttpServletRequest;
 import springboard.model.JdbcTemplateConst;
+import springboard.service.IBoardService;
+import springboard.service.ListExecute;
 
 @Controller
 public class BoardController
@@ -20,9 +22,18 @@ public class BoardController
 		
 		JdbcTemplateConst.template = this.template;
 	}
+	IBoardService service = null;
 	
 	@RequestMapping("/board/list.do")
 	public String list(Model model, HttpServletRequest req) {
+		
+		model.addAttribute("req", req);
+		service = new ListExecute();
+		service.execute(model);
+		
 		return "07Board/list";
 	}
+	
+	
+	
 }
