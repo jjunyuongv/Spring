@@ -39,7 +39,8 @@ public class JDBCTemplateDAO
 			sql +=" WHERE "+map.get("Column")+" "
 				+ " LIKE '%"+map.get("Word")+"%' ";
 		}
-		sql += " ORDER BY idx DESC";
+//		sql += " ORDER BY idx DESC";
+		sql += " ORDER BY bgroup DESC, bstep ASC";
 		return (ArrayList<SpringBoardDTO>)template.query(sql, new BeanPropertyRowMapper<SpringBoardDTO>(SpringBoardDTO.class));
 	}
 	
@@ -179,6 +180,32 @@ public class JDBCTemplateDAO
 				+ " WHERE bgroup=? AND bstep>?";
 		template.update(sql, new Object[] {bGroup, bStep});
 	}
+	
+	public ArrayList<SpringBoardDTO> listPage(
+			Map<String, Object> map){
+
+	int start = Integer.parseInt(map.get("start").toString());
+	int end = Integer.parseInt(map.get("end").toString());
+	
+	String sql = ""
+			+"SELECT * FROM ("
+			+"    SELECT Tb.*, rownum rNum FROM ("
+			+"        SELECT * FROM springboard ";				
+		if(map.get("Word")!=null){
+			sql +=" WHERE "+map.get("Column")+" "
+				+ " LIKE '%"+map.get("Word")+"%' ";				
+		}			
+		sql += " ORDER BY bgroup DESC, bstep ASC"
+		+"    ) Tb"
+		+")"
+		+" WHERE rNum BETWEEN "+start+" and "+end;
+	
+	return (ArrayList<SpringBoardDTO>)
+		template.query(sql, 
+			new BeanPropertyRowMapper<SpringBoardDTO>(
+			SpringBoardDTO.class));
+	}
+
 	
 }
 

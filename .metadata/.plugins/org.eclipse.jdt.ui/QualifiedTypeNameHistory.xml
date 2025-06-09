@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
-    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
-    <fullyQualifiedTypeName name="com.study.spring.aop.SalesManVO"/>
-    <fullyQualifiedTypeName name="org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint"/>
-    <fullyQualifiedTypeName name="java.lang.Throwable"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Aspect"/>
-    <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Pointcut"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Before"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Around"/>
     <fullyQualifiedTypeName name="org.aspectj.lang.ProceedingJoinPoint"/>
@@ -30,7 +22,6 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.ListableBeanFactoryExtensionsKt"/>
     <fullyQualifiedTypeName name="com.study.spring.service.IBoardService"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="springboard.service.ListExecute"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
     <fullyQualifiedTypeName name="javax.swing.Spring"/>
@@ -41,7 +32,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="springboard.service.ViewExecute"/>
     <fullyQualifiedTypeName name="java.net.PasswordAuthentication"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.BeanPropertyRowMapper"/>
     <fullyQualifiedTypeName name="springboard.service.PasswordActionExecute"/>
     <fullyQualifiedTypeName name="springboard.service.EditExecute"/>
@@ -56,8 +46,18 @@
     <fullyQualifiedTypeName name="com.sun.tools.javac.parser.ReferenceParser.Mode"/>
     <fullyQualifiedTypeName name="springboard.service.IBoardService"/>
     <fullyQualifiedTypeName name="springboard.model.JDBCTemplateDAO"/>
-    <fullyQualifiedTypeName name="springboard.model.SpringBoardDTO"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.PreparedStatementSetter"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="springboard.service.ReplyActionExecute"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ConfigurableApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.core.env.ConfigurableEnvironment"/>
+    <fullyQualifiedTypeName name="org.springframework.core.env.MutablePropertySources"/>
+    <fullyQualifiedTypeName name="org.springframework.core.io.support.ResourcePropertySource"/>
+    <fullyQualifiedTypeName name="springboard.utill.EnvFileReader"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="springboard.utill.PagingUtil"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="springboard.model.SpringBoardDTO"/>
 </qualifiedTypeNameHistroy>

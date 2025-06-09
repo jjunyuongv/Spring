@@ -83,6 +83,13 @@
 				</c:otherwise>
 			</c:choose>
 		</table>
+		<table class="table table-borderd">
+			<tr>
+				<td align="center">
+					${ pagingImg }
+				</td>
+			</tr>
+		</table>
 	</div>
 	
 	</body>
