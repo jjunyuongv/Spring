@@ -41,7 +41,8 @@ public class JDBCTemplateDAO
 		}
 //		sql += " ORDER BY idx DESC";
 		sql += " ORDER BY bgroup DESC, bstep ASC";
-		return (ArrayList<SpringBoardDTO>)template.query(sql, new BeanPropertyRowMapper<SpringBoardDTO>(SpringBoardDTO.class));
+		return (ArrayList<SpringBoardDTO>)template
+				.query(sql, new BeanPropertyRowMapper<SpringBoardDTO>(SpringBoardDTO.class));
 	}
 	
 	public int write(SpringBoardDTO SpringBoardDTO) {

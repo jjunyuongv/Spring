@@ -8,8 +8,8 @@ import org.springframework.ui.Model;
 import jakarta.servlet.http.HttpServletRequest;
 import springboard.model.JDBCTemplateDAO;
 import springboard.model.SpringBoardDTO;
-import springboard.utill.EnvFileReader;
-import springboard.utill.PagingUtil;
+import springboard.util.EnvFileReader;
+import springboard.util.PagingUtil;
 
 public class ListExecute implements IBoardService
 {
@@ -79,6 +79,7 @@ public class ListExecute implements IBoardService
 		String pagingImg = PagingUtil.pagingImg(totalRecordCount,
 				pageSize, blockPage, nowPage,
 				req.getContextPath()+"/board/list.do?"+addQueryString);
+		
 		model.addAttribute("pagingImg", pagingImg);
 		model.addAttribute("totalPage", totalPage);
 		model.addAttribute("nowPage", nowPage);
