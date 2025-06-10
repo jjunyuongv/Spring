@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.study.spring.mybatis.MyBoardDTO;
@@ -159,4 +160,22 @@ public class MybatisController
 		}
 		return mv;
 	}
+	
+	@RequestMapping(value="/mybatis/writeAction.do",method =RequestMethod.POST)
+	public String wirteAction(Model model, HttpServletRequest req, HttpSession session) {
+		if(session.getAttribute("siteUserInfo")==null)
+		{
+			return "redirect:login.do";
+		}
+		
+		int applyRow = sqlSession.getMapper(ServiceMyBoard.class)
+			.write(req.getParameter("name"),
+				req.getParameter("contents"),
+				((MyMemberDTO)session.getAttribute("siteUserInfo")).getId());
+		System.out.println("입력된행의갯수:"+ applyRow);
+		
+		return "redirect:list.do";
+	}
+	
+	
 }

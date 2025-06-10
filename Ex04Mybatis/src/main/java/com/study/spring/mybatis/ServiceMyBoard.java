@@ -2,6 +2,7 @@ package com.study.spring.mybatis;
 
 import java.util.ArrayList;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 /*
@@ -24,4 +25,7 @@ public interface ServiceMyBoard
 	 */
 	public ArrayList<MyBoardDTO> listPage(int s, int e);
 	
+	public int write(@Param("_name") String name,
+			@Param("_contents") String contents,
+			@Param("_id") String id);
 }

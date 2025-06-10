@@ -51,5 +51,10 @@ namespace 속성 : 해당 매퍼파일을 호출하기 위해 정의한 인터�
  		WHERE rNum BETWEEN #{param1} AND #{param2}
  	</select>
  	
+ 	<insert id="write">
+ 		INSERT INTO myboard (idx, id, name, contents)
+ 		VALUES
+ 		(myboard_seq.nextval, #{_id}, #{_name}, #{_contents})
+ 	</insert>
  	
 </mapper>
