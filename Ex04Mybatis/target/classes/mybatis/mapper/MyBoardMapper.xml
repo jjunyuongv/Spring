@@ -57,4 +57,20 @@ namespace 속성 : 해당 매퍼파일을 호출하기 위해 정의한 인터�
  		(myboard_seq.nextval, #{_id}, #{_name}, #{_contents})
  	</insert>
  	
+ 	<select id="view" resultType="com.study.spring.mybatis.MyBoardDTO"
+ 		parameterType="com.study.spring.mybatis.ParameterDTO">
+ 		SELECT * FROM myboard WHERE idx=#{board_idx}
+ 			AND id=#{user_id}
+ 	</select>
+ 	
+ 	<update id="modify" parameterType="com.study.spring.mybatis.MyBoardDTO">
+ 		UPDATE myboard
+ 			SET name=#{name}, contents=#{contents}
+ 			WHERE idx=#{idx} AND id=#{id}
+ 	</update>
+ 	
+ 	<delete id="delete">
+ 		DELETE FROM myboard WHERE idx=#{param1} AND id=#{param2}
+ 	</delete>
+ 	
 </mapper>

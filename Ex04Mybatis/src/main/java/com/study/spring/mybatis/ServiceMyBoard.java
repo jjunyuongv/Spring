@@ -28,4 +28,10 @@ public interface ServiceMyBoard
 	public int write(@Param("_name") String name,
 			@Param("_contents") String contents,
 			@Param("_id") String id);
+	
+	public MyBoardDTO view(ParameterDTO parameterDTO);
+	
+	public int modify(MyBoardDTO myBoardDTO);
+	
+	public int delete(String idx, String id);
 }

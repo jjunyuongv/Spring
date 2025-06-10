@@ -1,5 +1,6 @@
 package com.study.spring;
 
+import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 
 import org.apache.ibatis.session.SqlSession;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.study.spring.mybatis.MyBoardDTO;
 import com.study.spring.mybatis.MyMemberDTO;
+import com.study.spring.mybatis.ParameterDTO;
 import com.study.spring.mybatis.ServiceMyBoard;
 import com.study.spring.mybatis.ServiceMyMember;
 import com.study.spring.util.PagingUtil;
@@ -173,6 +175,58 @@ public class MybatisController
 				req.getParameter("contents"),
 				((MyMemberDTO)session.getAttribute("siteUserInfo")).getId());
 		System.out.println("입력된행의갯수:"+ applyRow);
+		
+		return "redirect:list.do";
+	}
+	
+	@RequestMapping("/mybatis/modify.do")
+	public String modify(Model model, HttpServletRequest req,
+			HttpSession session) {
+		
+		if(session.getAttribute("siteUserInfo")==null) {
+			return "redirect:login.do";
+		}
+		
+		ParameterDTO parameterDTO = new ParameterDTO();
+		parameterDTO.setBoard_idx(req.getParameter("idx"));
+		parameterDTO.setUser_id(((MyMemberDTO)session
+				.getAttribute("siteUserInfo")).getId());
+		
+		MyBoardDTO dto = sqlSession
+				.getMapper(ServiceMyBoard.class)
+				.view(parameterDTO);
+		
+		model.addAttribute("dto", dto);
+		return "07Mybatis/modify";
+		
+	}
+	
+	@RequestMapping("/mybatis/modifyAction.do")
+	public String modifyAction(HttpSession session, MyBoardDTO myBoardDTO) {
+		
+		if(session.getAttribute("siteUserInfo")==null) {
+			return "redirect:login.do";
+		}
+		
+		int applyRow = sqlSession.getMapper(ServiceMyBoard.class).modify(myBoardDTO);
+		System.out.println("수정된행의갯수:"+ applyRow);
+		
+		return "redirect:list.do";
+	}
+	
+	@RequestMapping("/mybatis/delete.do")
+	public String delete(HttpServletRequest req,
+			HttpSession session) {
+		
+		if(session.getAttribute("siteUserInfo")==null) {
+			return "redirect:login.do";
+		}
+		
+		int applyRow = sqlSession.getMapper(ServiceMyBoard.class)
+				.delete(req.getParameter("idx"),
+					((MyMemberDTO)session.getAttribute("siteUserInfo"))
+						.getId());
+		System.out.println("삭제된행의갯수:"+ applyRow);
 		
 		return "redirect:list.do";
 	}
