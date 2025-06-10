@@ -2,14 +2,21 @@ package com.study.spring.mybatis;
 
 public class ParameterDTO
 {
+	//멤버변수1
+	//사용자 세션 아이디
 	private String user_id;
+	//게시물의 일련번호
 	private String board_idx;
 	
+	//멤버변수2 : 게시판 Ver02에서 검색기능을 위해 추가한다. 
+	//검색필드와 검색어
 	private String searchField;
 	private String searchTxt;
-	
+	//게시물의 시작, 종료 구간 설정값
 	private int start;
 	private int end;
+	
+	//생성자는 추가하지 않고, getter/setter메서드 생성
 	public String getUser_id()
 	{
 		return user_id;
@@ -58,6 +65,4 @@ public class ParameterDTO
 	{
 		this.end = end;
 	}
-	
-	
 }

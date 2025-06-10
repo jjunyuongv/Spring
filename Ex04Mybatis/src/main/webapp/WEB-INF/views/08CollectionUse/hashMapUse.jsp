@@ -2,10 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>  
 <!DOCTYPE html>
-	<html>
+<html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>컬렉션 HashMap 사용</title>
 		<link rel="stylesheet" href="../static/bootstrap-5.1.3/css/bootstrap.min.css" />
 		<script src="../static/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
@@ -14,11 +13,10 @@
 	<body>
 	<div class="container">
 		<h2>HashMap 사용하기</h2>
-		
 		<c:forEach items="${lists }" var="row">
 			작성자:${row.name }(${row.id })
 			<p>${row.contents }</p>
-			<br />
+			<br/>
 		</c:forEach>
 	</div>
 	</body>
