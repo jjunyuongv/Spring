@@ -102,4 +102,16 @@ namespace 속성 : 해당 매퍼파일을 호출하기 위해 정의한 인터�
  		ORDER BY idx DESC
  	</select>
  	
+ 	<select id="arrayListUse" resultType="com.study.spring.mybatis.MyBoardDTO"
+ 		parameterType="java.util.ArrayList">
+ 		SELECT * FROM myboard
+ 		WHERE 
+ 		<foreach collection="list" item="item" index="index" open="(" close=")" separator="or">
+ 			name=#{item}
+ 		</foreach>
+ 		ORDER BY idx DESC
+ 	</select>
+ 	
+ 	
+ 	
 </mapper>

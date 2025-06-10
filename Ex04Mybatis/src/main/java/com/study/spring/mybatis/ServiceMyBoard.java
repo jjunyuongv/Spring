@@ -1,6 +1,7 @@
 package com.study.spring.mybatis;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
@@ -42,4 +43,7 @@ public interface ServiceMyBoard
 	
 	public ArrayList<MyBoardDTO> hashMapUse(
 			Map<String, String> hMap);
+	
+	public ArrayList<MyBoardDTO> arrayListUse(
+			List<String> aList);
 }
