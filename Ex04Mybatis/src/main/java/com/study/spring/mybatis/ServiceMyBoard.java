@@ -1,6 +1,7 @@
 package com.study.spring.mybatis;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
@@ -34,4 +35,11 @@ public interface ServiceMyBoard
 	public int modify(MyBoardDTO myBoardDTO);
 	
 	public int delete(String idx, String id);
+	
+	public int getTotalCountSearch(ParameterDTO parameterDTO);
+	public ArrayList<MyBoardDTO>
+		listPageSearch(ParameterDTO parameterDTO);
+	
+	public ArrayList<MyBoardDTO> hashMapUse(
+			Map<String, String> hMap);
 }

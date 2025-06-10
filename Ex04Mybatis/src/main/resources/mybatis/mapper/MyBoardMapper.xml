@@ -73,4 +73,33 @@ namespace 속성 : 해당 매퍼파일을 호출하기 위해 정의한 인터�
  		DELETE FROM myboard WHERE idx=#{param1} AND id=#{param2}
  	</delete>
  	
+ 	<select id="getTotalCountSearch" resultType="int"
+ 		parameterType="com.study.spring.mybatis.ParameterDTO">
+ 		SELECT COUNT(*) from myboard
+ 		<if test="searchTxt!=null and !searchTxt.equals('')">
+ 			WHERE ${searchField} like '%'||#{searchTxt}||'%'
+ 		</if>
+ 	</select>
+ 	<select id="listPageSearch" resultType="com.study.spring.mybatis.MyBoardDTO"
+ 		parameterType="com.study.spring.mybatis.ParameterDTO">
+ 		SELECT * FROM (
+ 			SELECT Tb.*, rownum rNum FROM (
+ 				SELECT * FROM myboard
+ 				<if test="searchTxt!=null and !searchTxt.equals('')">
+		 			WHERE ${searchField} like '%'||#{searchTxt}||'%'
+		 		</if>
+		 		ORDER BY idx DESC
+ 			) Tb
+ 		)
+ 		WHERE rNum<![CDATA[>=]]>#{start} AND rNum<![CDATA[<=]]>#{end}
+ 	</select>
+ 	
+ 	<select id="hashMapUse" resultType="com.study.spring.mybatis.MyBoardDTO"
+ 		parameterType="java.util.Map">
+ 		SELECT * FROM myboard
+ 		WHERE id=#{key_id} or name=#{key_name}
+ 			or contents=#{key_contents}
+ 		ORDER BY idx DESC
+ 	</select>
+ 	
 </mapper>

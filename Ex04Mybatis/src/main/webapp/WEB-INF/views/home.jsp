@@ -13,5 +13,23 @@
 				한줄게시판 바로가기(Paging:O,Search:X)
 			</a>
 		</li>
+		<li>
+			<a href="mybatis/listSearch.do" target="_blank">
+				한줄게시판 바로가기(Paging:O,Search:X)
+			</a>
+		</li>
+		
+		<hr/>
+		<h2>Collection 사용하기</h2>
+		<li>
+			<a href="Collection/hashMap.do" target="_blank">
+				hashMap.do 바로가기
+			</a>
+		</li>
+		<li>
+			<a href="Collection/arrayList.do" target="_blank">
+				arrayList.do 바로가기
+			</a>
+		</li>
 	</body>
 </html>

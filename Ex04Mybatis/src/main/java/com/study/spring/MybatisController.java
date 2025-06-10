@@ -231,5 +231,40 @@ public class MybatisController
 		return "redirect:list.do";
 	}
 	
+	@RequestMapping("/mybatis/listSearch.do")
+	public String listSearch(Model model, HttpServletRequest req) {
+		
+		ParameterDTO parameterDTO = new ParameterDTO();
+		parameterDTO.setSearchField(req.getParameter("searchField"));
+		parameterDTO.setSearchTxt(req.getParameter("searchTxt"));
+		
+		int totalRecordCount = sqlSession.getMapper(ServiceMyBoard.class).getTotalCountSearch(parameterDTO);
+		
+		int pageSize = 4;
+		int blockPage = 2;	
+		
+		int nowPage = (req.getParameter("nowPage")==null || req.getParameter("nowPage").equals(""))
+				? 1 : Integer.parseInt(req.getParameter("nowPage"));
+		
+		int start = (nowPage-1)* pageSize + 1;
+		int end = nowPage * pageSize;
+		
+		parameterDTO.setStart(start);
+		parameterDTO.setEnd(end);
+		
+		ArrayList<MyBoardDTO> lists = sqlSession.getMapper(ServiceMyBoard.class).listPageSearch(parameterDTO);
+		
+		String pagingImg = PagingUtil.pagingImg(totalRecordCount, pageSize, blockPage, nowPage, 
+				req.getContextPath()+"/mybatis/listSearch.do?");
+		model.addAttribute("pagingImg", pagingImg);
+		
+		for (MyBoardDTO dto : lists)
+		{
+			String temp = dto.getContents().replace("\r\n",	"<br/>");
+			dto.setContents(temp);
+		}
+		model.addAttribute("lists", lists);
+		return "07Mybatis/list_search";
+	}
 	
 }
