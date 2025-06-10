@@ -94,6 +94,15 @@
 	    <version>3.0.3</version>
 	</dependency>
 	
+	<!-- 롬북 의존설정 -->
+	<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.18.38</version>
+	</dependency>
+
+	
 	
   </dependencies>
 </project>

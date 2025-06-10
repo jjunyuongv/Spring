@@ -22,3 +22,35 @@ insert into myboard values (myboard_seq.nextval, 'korea', '스모', '방명록4 
 commit;
 select * from myboard;
 
+
+
+drop table transaction_pay;
+drop table transaction_ticket;
+
+-- 티켓 구매 금액을 입력하는 테이블
+create table transaction_pay (
+    userid varchar2(30) not null,  
+    amount number not null
+); 
+
+-- 구매한 티켓매수를 입력하는 테이블
+create table transaction_ticket (
+    userid varchar2(30) not null,
+    t_count number(2) not null 
+        check(t_count<=5)
+);
+
+-- 데이터 입력 테스트
+-- 티켓 2장을 구매했다고 가정
+insert into transaction_ticket values ('tjoeun', 2);
+insert into transaction_pay values ('tjoeun', 20000);
+
+
+
+
+
+
+
+
+
+
